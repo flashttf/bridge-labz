@@ -12,14 +12,14 @@ public class PermutationString {
 		permute(" ",s1);
 	}
 
-	private static void permute(String prefix, String s1) {
+	private static void permute(String resultStr, String s1) {
 		
-		int n=s1.length();
-		if(n==0)
-			System.out.println(prefix);
+		
+		if(s1.isEmpty())
+			System.out.println(resultStr+s1);
 		else {
-			for(int i=0;i<n;i++)
-				permute(prefix+s1.charAt(i),s1.substring(0,i)+s1.substring(i+1,n));
+			for(int i=0;i<s1.length();i++)
+				permute(resultStr+s1.charAt(i),s1.substring(0,i)+s1.substring(i+1,s1.length()));
 		}
 	}
 	
