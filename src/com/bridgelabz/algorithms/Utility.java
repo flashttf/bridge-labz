@@ -37,7 +37,29 @@ public class Utility {
 			arr[i]=sc.nextInt();		}
 		return arr;
 	}
-	////////////////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	
+	/*---Sort charArray--
+	 * 
+	 */
+	public static String sort(char[] ch) {
+		String result="";
+		for(int i=0;i<ch.length;i++) {
+			for(int j=i+1;j<ch.length;j++) {
+				if(ch[i]>ch[j]) {
+				char temp=ch[i];
+				ch[i]=ch[j];
+				ch[j]=temp;
+				}
+			}
+		}
+		for(int i=0;i<ch.length;i++) {
+			result=result+ch[i];
+		}
+		return result;
+	}
+	
+	//<----------------------------------------------------------------->//
 	
 	
 	
@@ -74,7 +96,7 @@ public class Utility {
 		}
 		return strArray.toString();
 	}
-	///////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
 
 	
 	
@@ -95,7 +117,7 @@ public class Utility {
 		}
 		return arr;
 	}
-	//////////////////////////////////	
+	//<----------------------------------------------------------------->//
 	
 	///////////////////--InsertionSort String---///////////
 	
@@ -118,33 +140,45 @@ public class Utility {
 		
 		return temp;
 	}
-	//////////////////////////////////////////
+	//<----------------------------------------------------------------->//
 	
 	////////////////------------------Print Sorted Array-----------/////////////////////
 	
 	public static void printSortedArray(int[] arr) {
 		for(int i=0;i<arr.length;i++) {
-			System.out.println(arr[i]+" ");
+			System.out.print(arr[i]+" ");
 		}
 	}
-	////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	
 	
 	
 	//////////////----------------AnagramFunction-------------////
 	
 	public static boolean checkAnagram(String string1,String string2 ) {
+		
+		String s1=sort(string1.toCharArray());
+		String s2=sort(string2.toCharArray());
 		//If length is not equal Strings are not anagram
 		if(string1.length()!=string2.length()) {
 			return false;
 		}
-		for(int i=0;i<string2.length();i++) {
-			char c=string1.charAt(i);
-			if(string2.indexOf(c)==-1) 
-				return false;
-			}
-		return true;
+//		for(int i=0;i<string2.length();i++) {
+//			char c=string1.charAt(i);
+//			if(string2.indexOf(c)==-1) 
+//				return false;
+//			}
+//		return true;
+		if(s1.equals(s2)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	
 	}
-	/////////////////////////////////////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	
 	
 	
 	//////////---------PalindromFunction---------------////////////////
@@ -163,7 +197,9 @@ public class Utility {
 			}
 		return false;
 	}
-	///////////////////////////////////////////////////////////////////       
+	//<----------------------------------------------------------------->//   
+	
+	
 	
 	/////--------checkPrime Function------------///////////////////////
 	
@@ -184,7 +220,9 @@ public class Utility {
 			return true;
 		}
 	}
-	//////////////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	
+	
 	
 	////-------Palindrome Number-function---//////////////
 	
@@ -221,7 +259,9 @@ public class Utility {
 	
 	
 
-	//////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	
+	
 	
 	//////////-----to reverse a number---//////////
 	
@@ -232,13 +272,13 @@ public class Utility {
 		
 		temp=n;
 		while(n!=0) {
-			r=n%10;
+			r=n%10;						//first digit
 			rev=rev*10+r;
 			n=n/10;
 		}
 		return rev;
 	}
-	////////////////////////////////////
+	//<----------------------------------------------------------------->//
 	
 	
 	/////-----to count digits of  a number-////////////
@@ -259,7 +299,7 @@ public class Utility {
 			return digits;
 		}
 	}
-	/////////////////////////
+	//<----------------------------------------------------------------->//
 	
 	//////////////////-----------Binary Search Integer(Sorted array only)------//////////////
 	
@@ -276,12 +316,12 @@ public class Utility {
 		}
 		return -1;
 	}
-	////////////////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
 	
 	///////////////////---BinarySearch String-----//////////
 	
 	public static int binarySearchString(String str,String x) {
-		String strArray[]=str.split(" ");
+		String strArray[]=str.split(" ");			//convertiing the given string to string array
 		Arrays.sort(strArray);
 		int low=0;
 		int high=strArray.length-1;
@@ -297,9 +337,71 @@ public class Utility {
 		}
 		return  -1;
 	}
-	//////////////////////////////////////////////////////////////
+	//<----------------------------------------------------------------->//
+	/*-----MergeSort Method
+	 *  
+	 */
+	public static void mergeSort(int[] arr,int low,int high) {
+	if(low<high) {	
+		int mid=(low+high)/2;						//to find mid index.
+		
+		mergeSort(arr,low,mid);						//to sort first left subarrays	
+		mergeSort(arr,mid+1,high);					//to sort rigth subarray
+		
+		merge(arr,low,mid,high);					//mergesorted arrays
+	}
+		
+	}
 	
 	
-
+	/*------Merge function
+	 * 
+	*/
+		public static void merge(int[] arr,int low,int mid,int high) {
+		
+		int n1=mid-low+1;							//to calculate size of left-subarray
+		int n2=high-mid;							//to calculate size of right-subarray
+		
+		int[] leftArr=new int[n1];					//creating the left-temp arrays
+		int[] rightArr=new int[n2];					//creating right-temp subarray
+		
+		for(int i=0;i<n1;i++) {						//copy elements of array less than mid+1 to left sub array
+			leftArr[i]=arr[low+i];
+		}
+		
+		for(int j=0;j<n2;j++) {						//copy elements of array greater than mid to right sub array.	
+			rightArr[j]=arr[mid+1+j];
+		}
+		
+		int i=0;									//initial index of left-temp subarray
+		int	j=0;									//initial index of right-temp subarray
+		
+		int k=low;
+		
+		while(i<n1 && j<n2) {						//merging
+			if(leftArr[i] <= rightArr[j]) {			//if element in left is less than right then place in array at position k	
+				arr[k]=leftArr[i];
+				i++;
+			}
+			else {
+				arr[k]=rightArr[j];
+				j++;
+			}
+			k++;
+		}
+		
+		while(i<n1) {								//copying remaining elements of left-subarray to array
+			arr[k]=leftArr[i];
+			i++;
+			k++;
+		}
+		
+		while(j<n2) {								//copying remaining elements of right-subarray to array
+			arr[k]=rightArr[j];
+			j++;
+			k++;
+		}
+	}
+	//<----------------------------------------------------------------->//
 }
 

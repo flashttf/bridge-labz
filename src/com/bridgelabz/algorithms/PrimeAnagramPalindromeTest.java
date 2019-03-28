@@ -22,7 +22,8 @@ public class PrimeAnagramPalindromeTest {
 					}
 				}
 			System.out.println();
-			
+			System.out.println("Printing all prime numbers in range \n"+al);
+			System.out.println();
 		/*	
 			int[] arr=new int[al.size()];
 			Iterator<Integer> itr=al.iterator();
@@ -44,7 +45,7 @@ public class PrimeAnagramPalindromeTest {
 	*/
 			try {
 				
-				System.out.println(al);
+				
 				
 				for(int j=0;j<al.size();j++) {
 					for(int k=j+1;k<al.size();k++) {

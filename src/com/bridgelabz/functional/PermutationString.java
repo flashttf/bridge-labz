@@ -18,10 +18,11 @@ public class PermutationString {
 		if(s1.isEmpty())
 			System.out.println(resultStr+s1);
 		else {
-			for(int i=0;i<s1.length();i++)
+			for(int i=0;i<s1.length();i++) {
+				//System.out.println(i);
 				permute(resultStr+s1.charAt(i),s1.substring(0,i)+s1.substring(i+1,s1.length()));
 		}
-	}
+	}}
 	
 	public static void main(String[] args) {
 		permuteString();
