@@ -24,7 +24,7 @@ public class TicTacToe {
 			row=sc.nextInt()-1;
 			col=sc.nextInt()-1;
 			board[row][col]=turn;
-			printValue();
+		
 			if(gameover(row,col)) {
 				playing=false;
 				System.out.println("Game  over "+turn+" wins!!!");
@@ -51,19 +51,6 @@ public class TicTacToe {
 		return false;
 	}
 
-	private static void printValue() {
-		// TODO Auto-generated method stub
-		for(int i=0;i<3;i++) {
-			System.out.println();
-			for(int j=0;j<3;j++) {
-				if(j==0) {
-					System.out.print(" | ");
-				}
-				System.out.print(board[i][j] + " | ");
-			}
-			System.out.println();
-			System.out.println();
-		}
-	}
+
 	
 }

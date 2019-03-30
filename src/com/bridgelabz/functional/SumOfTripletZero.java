@@ -6,11 +6,11 @@ public class SumOfTripletZero {
 		
 		boolean found=true;
 		
-		for(int i=0;i<n-2;i++) 
+		for(int i=0;i<n;i++) 
 		{
-			for(int j=i+1;j<n-1;j++) 
+			for(int j=i+1;j<n-2;j++) 
 			{
-				for(int k=j+1;i<n;i++) 
+				for(int k=j+1;i<n-1;i++) 
 				{
 					if(a[i]+a[j]+a[k]==0) 
 					{

@@ -2,6 +2,8 @@ package com.bridgelabz.functional;
 
 import java.util.Scanner;
 
+import com.bridgelabz.algorithms.Utility;
+
 public class Coupon {
 	
 	//return a random coupon between 0 and n-1
@@ -15,17 +17,19 @@ public class Coupon {
 		boolean[] isCollected=new boolean[n]; //isCollected[i]=true if card type i is already collected
 		int count=0;						  //no of coups collected
 		int distinct=0;						//no of distinct coups types collected
-		
-		
+				
 		while(distinct<n) {
 		int	value=generateCouponNo(n);
 			count++;
 			if(!isCollected[value]) {
 				distinct++;
+				
 				isCollected[value]=true;
 			}
 		}
+		
 		return count;
+		
 	}
 	
 	public static void main(String[] args) {

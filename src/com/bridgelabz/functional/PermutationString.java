@@ -22,7 +22,8 @@ public class PermutationString {
 				//System.out.println(i);
 				permute(resultStr+s1.charAt(i),s1.substring(0,i)+s1.substring(i+1,s1.length()));
 		}
-	}}
+	}
+}
 	
 	public static void main(String[] args) {
 		permuteString();

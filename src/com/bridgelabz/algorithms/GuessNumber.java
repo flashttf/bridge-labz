@@ -7,12 +7,15 @@ public class GuessNumber {
 	public static int search(int low,int high) {
 		int y;
 		if((high-low)==1) {
-			return -1;
+			return low;
 		}
 		int mid=low+(high-low)/2;
-		System.out.println("Is it less than"+mid+"\n Enter 1 or 0");
+		System.out.println("Is it less than"+mid+"\n Enter 1 if less  else enter 0");
 		y=sc.nextInt();
-		if(y==1) {
+		//if(search(low,mid)==mid) {
+		//	return mid;
+		//}
+		 if(y==1) {
 			return search(low,mid);
 		}
 		else {
@@ -26,5 +29,6 @@ public class GuessNumber {
 		int n=sc.nextInt();
 		int x=(int)Math.pow(2,n);
 		int secret=search(0,x);
+		System.out.println("Your number is "+secret);
 	}
 }

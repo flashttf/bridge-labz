@@ -22,9 +22,7 @@ public class CoinFlip {
 				if(randNum<0.5) {
 					heads++;
 				}
-				else {
-					tails++;
-				}
+				
 			
 		}
 		percentHeads=(((double)(heads)/flips)*100);

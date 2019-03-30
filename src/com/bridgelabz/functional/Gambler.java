@@ -22,7 +22,7 @@ public class Gambler {
 		int n=sc.nextInt();
 		
 		for(int i=1;i<=n;i++) {
-			int cash=stake;
+				int cash=stake;
 			while(cash>0&&cash<goal) {
 				bets++;
 			

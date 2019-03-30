@@ -122,7 +122,7 @@ public class Utility {
 	///////////////////--InsertionSort String---///////////
 	
 	public static String insertionSortString(String str) {
-		String strArray[]=str.split(" ");
+		String strArray[]=str.split(" ");						//converting to string array
 		int n=strArray.length;
 		String temp="";
 		for(int i=1;i<n;i++) {
@@ -163,7 +163,7 @@ public class Utility {
 		if(string1.length()!=string2.length()) {
 			return false;
 		}
-//		for(int i=0;i<string2.length();i++) {
+//		for(int i=0;i<string2.length();i++) {				//checking anagram by index.if index is p
 //			char c=string1.charAt(i);
 //			if(string2.indexOf(c)==-1) 
 //				return false;
@@ -187,7 +187,7 @@ public class Utility {
 		int  n=string1.length();
 		String reverse="";
 		for(int i=n-1;i>=0;i--) {
-			reverse=reverse+string1.charAt(i);
+			reverse=reverse+string1.charAt(i);				//append the element at i to string reverse
 			
 		}
 		
@@ -230,25 +230,20 @@ public class Utility {
 		int r;
 		int temp;
 		int rev=0;
-		int flag=1;
+	
 		
 		temp=n;
-		while(n!=0) {
+		while(n!=0) {								//reversing the number
 			r=n%10;
 			rev=rev*10+r;
 			n=n/10;
 		}
 		
 		
-		if(temp==rev) { 
-		flag=1;							//if flag==1 number is palindrome.								
-		}
-		else {
-			flag=0;
-		}
 		
 		
-		if(flag==1) {
+		
+		if(temp==rev) {
 			return true;
 		}
 		else {
@@ -325,7 +320,7 @@ public class Utility {
 		Arrays.sort(strArray);
 		int low=0;
 		int high=strArray.length-1;
-		while(low<=high) {
+		while(low<=high) {                             
 			int mid=low+(high-low)/2;
 			int result=x.compareTo(strArray[mid]);
 			if(result==0)
@@ -379,7 +374,7 @@ public class Utility {
 		int k=low;
 		
 		while(i<n1 && j<n2) {						//merging
-			if(leftArr[i] <= rightArr[j]) {			//if element in left is less than right then place in array at position k	
+		 	if(leftArr[i] <= rightArr[j]) {			//if element in left is less than right then place in array at position k	
 				arr[k]=leftArr[i];
 				i++;
 			}
@@ -403,5 +398,12 @@ public class Utility {
 		}
 	}
 	//<----------------------------------------------------------------->//
+		
+		/*@ Method to create a file.
+		 * 
+		 * 
+		 */
+		
+		
 }
 

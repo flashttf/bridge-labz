@@ -40,13 +40,9 @@ public class PrimeAnagramPalindromeTest {
 					}
 				}
 			}
+		 */
 			
-			
-	*/
 			try {
-				
-				
-				
 				for(int j=0;j<al.size();j++) {
 					for(int k=j+1;k<al.size();k++) {
 						if(Utility.checkAnagram(Integer.toString(al.get(j)), Integer.toString(al.get(k)))) {
