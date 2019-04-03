@@ -74,21 +74,21 @@ public class UtilityDs {
 	//****************************************************************************
 	public static boolean isPrime(int n)
 	{
-		if (n <= 1)  //e.g n=15
+		if (n <= 1)  							//1 and numbers less than 1 are not prime nos
 		{  
 			return false;  
 		} 
-		for(int i=2; i<=n/2; i++)
+		for(int i=2; i<=n/2; i++)				// traversing from 2 to n/2 instead of n-1 to save unnecessary loops.
 	     {
  
 			int rem=n%i;
-			if(rem==0)
+			if(rem==0)							// if remainder of any of n%i is zero				
 			{
-				return false;
+				return false;					// then that no is not prime.
 			}
 			
 	}
-		return true;
+		return true;							// else no is prime.
 	}
 	//****************************************************************************
 	public static int[] PrimeNumber(int range) 
@@ -142,7 +142,7 @@ public class UtilityDs {
 	//****************************************************************************
 	public static void twoDPrimeAnagram(int[] anagram)
 	{
-		int row = 20 ,column = 26;
+		int row = 20 ,column = 26;								
 		int[][] anagramArray = new int[row][column];
 		int temp = 100 , k=0;
 		for(int i = 0 ;i<row; i++)
@@ -313,13 +313,13 @@ public class UtilityDs {
 				int m0 = m + 12 * ((14 - m) / 12) - 2;
 				int d0 = (d + x + 31 * m0 / 12) % 7;
 
-				int start = d0;
-				int totalDaysOfMonth = 0, count = 1;
+				int start = d0;										//initialize startDay with d0.
+				int totalDaysOfMonth = 0, count = 1;				
 				if (month == 2) {
-					if (isLeapYearForCalander(year)) // if leap year days = 29
+					if (isLeapYearForCalander(year)) 				//if userMonth is 2, if leap year days = 29
 						totalDaysOfMonth = 29;
 					else
-						totalDaysOfMonth = 28; // if not leap year days= 28
+						totalDaysOfMonth = 28;						 // if not leap year days= 28
 				} else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
 					totalDaysOfMonth = 31;
 				else
