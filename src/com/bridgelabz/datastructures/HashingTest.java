@@ -30,6 +30,7 @@ public class HashingTest {
 		}
 		Integer[] arr=new Integer[str.length];
 		System.out.print("List in File : ");
+		
 		//Storing into a integer array
 		for(int i=0;i<str.length;i++)
 		{
@@ -38,6 +39,7 @@ public class HashingTest {
 			arr[i]=Integer.parseInt(str[i]);
 		}
 		System.out.println();
+		
 
 		List<List<Integer>> arraylist =new ArrayList<List<Integer>>();
 		for(int i=0;i<11;i++)

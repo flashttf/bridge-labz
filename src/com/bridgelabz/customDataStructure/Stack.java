@@ -3,7 +3,7 @@ package com.bridgelabz.customDataStructure;
 public class Stack<T> {
 	final int capacity=Constants.STACKSIZE;
 	
-//	private T[] elements;
+
 	private int size;
 	
 	Node<T> top=null;

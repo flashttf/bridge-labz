@@ -37,7 +37,7 @@ public class Queue1<T>
         this.rear = (this.rear + 1)%this.capacity; 
         this.array[this.rear] = item; 
         this.size = this.size + 1; 
-        System.out.println(item+ " enqueued to queue"); 
+//        System.out.println(item+ " enqueued to queue"); 
     } 
        
     // Method to remove an item from queue.   

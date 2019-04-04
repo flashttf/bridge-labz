@@ -31,7 +31,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 			//Node<T> Node = new Node<T>();
 			Node<T> temp = first;
 			Node<T> prev = null;
-			while(temp != null && temp.compareTo(ele)<0)
+			while(temp != null && temp.compareTo(ele)<0)		//checking if  data in temp is less than data to insert.
 			{
 				prev = temp;
 				temp = temp.getNext();

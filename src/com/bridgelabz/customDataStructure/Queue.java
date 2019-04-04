@@ -23,6 +23,7 @@ public class Queue<T> {
 		if(head == null)  					// if no element present in queue new node will be head
 		{
 			head = new_node;
+			new_node.data=data;
 			length++;
 			return head;
 		}
