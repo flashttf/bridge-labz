@@ -15,18 +15,22 @@ public class Stack<T> {
 	public void push(T ele) {		
 		Node<T> temp=new Node<T>(ele);				//passing element to be be pushed to tempNode
 		temp.next=top;								//next of temp node will point to top
-		top=temp;									//tempNode will be the new top		
-	}
+		top=temp;									//tempNode will be the new top	
+		size++;		
+	}                      
 	
 	public T pop() {		
-		if(top==null) {								//if top is null.ie stack is empty						
+		if(top==null) {		  						//if top is null.ie stack is empty						
 			return null;
 		}
 		else {
 			T ele=top.data;							//storing data of topmost node in local variable T ele.	
 			top=top.next;							//top will decrement
-			return ele;
+			size--;										
+			return ele; 
+			
 		}
+		
 	}
 	
 	public T peek() {								//peek method will return element at top of stack
@@ -34,10 +38,11 @@ public class Stack<T> {
 	}
 	
 	public void printStack() {						//method to print a stack
+		
 		Node<T> temp=top;							//temp node will point to top
 		while(temp!=null) {							//traverse till temp node points to null
-			System.out.print(temp.data+"->");		//	
-			temp=temp.next;
+			System.out.print(temp.data+"->");		//	printing data
+			temp=temp.next;							//update to next node
 		}
 		System.out.println("");
 	}

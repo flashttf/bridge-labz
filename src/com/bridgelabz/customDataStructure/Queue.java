@@ -3,7 +3,7 @@ package com.bridgelabz.customDataStructure;
 public class Queue<T> {
 
 	Node head;
-	int length = 0;
+	int length = 0;					//to track size of queue.
 	class Node<T>
 	{
 		T data;
@@ -88,7 +88,7 @@ public class Queue<T> {
 		return;
 	}
 
-	//get element at perticular position
+	//get element at particular position
 	public <T>T get(int position)
 	{
 		Node new_node = head;

@@ -24,7 +24,7 @@ public class StackBalancedParanthesis<T> {
 	}
 	
 	/*
-	 * function to pop.(to remove and return the topmost element in the stack)
+	 * function to remove and return the topmost element in the stack
 	 * @return return the topmost element or else returns null if stack is empty
 	 */
 	
@@ -40,22 +40,21 @@ public class StackBalancedParanthesis<T> {
 		}
 	}
 	
-	/*peek method only returns the last element pushed in the stack
-	 * 
-	 * 
+	/*
+	 * peek method only returns the last element pushed in the stack
 	 */
 	public T peek() {
 		return (T) stack[top];
 	}
 	
 
-	/*Function to check if stack is empty or not 
+	/*function to check if stack is empty or not 
 	 * 		
 	 * @return returns true if stack is empty else false
 	 */
 
 	private boolean isStackEmpty() {
-		// TODO Auto-generated method stub
+		
 		return top == 0;
 	}
 	

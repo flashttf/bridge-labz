@@ -11,7 +11,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 	private int size;
 	/*   
 	 *create Node object with ele as data
-	 *check if the LL has no first/last / size = 0
+	 *check if the LList has no first/last / size = 0
 	 * if size = 0, first = last = n
 	 *else, last.next = n
 	 */
@@ -20,13 +20,13 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 	{
 		Node<T> n = new Node<T>();
 		n.setData(ele);
-		n.setNext(null);
-		if((first ==null) &&(last==null))
+		n.setNext(null);		
+		if((first ==null) &&(last==null))						//if list is empty.
 		{
 			first = last = n;
 			return;
 		}
-		if(!contains(ele)) 
+		if(!contains(ele)) 										//check if element is already is list.
 		{
 			//Node<T> Node = new Node<T>();
 			Node<T> temp = first;
@@ -75,7 +75,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 	 *  
 	 * Node temp = first;
 	 * compare temp.data with ele
-	 * if eq, return true
+	 * if equal, return true
 	 * else temp = temp.next until temp = null
 	 */
 	@Override
@@ -133,8 +133,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 		return false;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bl.DataStructures.List#isEmpty()
+	/* 
 	 * to check whether your elements is empty in the file or not
 	 */
 	@Override
@@ -144,8 +143,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 		return (size==0);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bl.DataStructures.List#size()
+	/* 
 	 * to check the current size of your elements in the file
 	 */
 	@Override
@@ -224,7 +222,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 	}
 
 
-	public int index(T ele)
+	public int index(T ele)						//method to return index of given element
 	{
 		if(isEmpty())
 		{
@@ -243,7 +241,7 @@ public class OrderedListImplementation<T> implements interfaceOrderedList<T> {
 		return -1;
 	}
 	
-	public void writeToFile(OrderedListImplementation<T> list, String filePath)
+	public void writeToFile(OrderedListImplementation<T> list, String filePath)		//method to write in file
 	{
 		if(list == null)
 			return;

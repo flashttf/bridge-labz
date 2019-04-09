@@ -2,8 +2,6 @@ package com.bridgelabz.customDataStructure;
 
 
 
-// A class to represent a queue 
-
 public class Queue1<T>
 { 
     int front, rear, size; 

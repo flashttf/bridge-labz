@@ -6,10 +6,10 @@ public class PermutationString {
 	
 	public static void permuteString(){
 		Scanner sc=new Scanner(System.in);
-		String s1=" ";
+		String s1="";
 		System.out.println("Enter String:");
 		s1=sc.nextLine();
-		permute(" ",s1);
+		permute("",s1);
 	}
 
 	private static void permute(String resultStr, String s1) {

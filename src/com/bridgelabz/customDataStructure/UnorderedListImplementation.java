@@ -12,17 +12,17 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 		@Override
 		public void add(T ele) 
 		{
-			Node<T> n = new Node<T>(ele);
+			Node<T> temp = new Node<T>(ele);
 		
-			if((first == null ) &&(last == null))
+			if((first == null ) &&(last == null))		//if list is empty
 			{
-				first = last = n;
+				first = last = temp;						//temp node will become the first and last
 		
 			}
-			else
+			else										//if list is not empty
 			{
-				last.next=n;
-				last = n;
+				last.next=temp;							//next of last will refer to temp node
+				last = temp;							//newly added node will be the last node.
 			}
 			size++;
 		}
@@ -39,44 +39,44 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 			System.out.println("");
 		}
 		@Override
-		public boolean contains(T ele) 
+		public boolean contains(T ele) 				//method to check if elem is present in list
 		{
-			Node<T> temp = first;
-			while(temp!= null)
+			Node<T> temp = first;					//initialzie tempNode with first.
+			while(temp!= null)						//to traverse till temp not null							
 			{
-				if(temp.data.equals(ele))
-					return true;
+				if(temp.data.equals(ele))			//if data in tempnode matches given element
+					return true;					//element is present in list	
 		
-				temp = temp.next;
+				temp = temp.next;					//else next node will be the new tempNode.
 		
 			}
-			return false;
+			return false;							//false if element is not present
 		}
 
 		@Override
-		public boolean remove(T ele)
+		public boolean remove(T ele)				
 		{
-			Node<T> temp = first,prev=null;
-			while(first!= null)
+			Node<T> temp = first,prev=null;					//initialize tempnode with first and prevnode with null
+			while(first!= null)								//while list not empty.
 			{
-				if(temp.data.equals(ele))
+				if(temp.data.equals(ele))					//check data in temp node is equal to data in current node
 				{
-					if(prev == null)
+					if(prev == null)						//deleting headnode.
 					{
-						first = temp.next;
+						first = temp.next;					///first will refer to next of tempnode
 		
 					}
 					else
 					{
-						prev.next = temp.next;
-						temp.next = null;
+						prev.next = temp.next;				//next of prevNode will refer to next of temp node
+						temp.next = null;					// change next field of tempNode to null
 					}
-					size--;
+					size--;										//decrement size
 					return true;
 				}
 				else
 				{
-					prev = temp;
+					prev = temp;							//
 					temp = temp.next;
 				}
 			}
@@ -96,20 +96,20 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 		}
 
 		@Override
-		public void append(T item) 
-		{
-			if(isEmpty())
+		public void append(T item) 						
+		{	
+			if(isEmpty())									//if list is empty add item to list
 			{
 				first = new Node<T>(item);
 			}
-			else if (contains(item))
+			else if (contains(item))						//else check if item is already present in list
 				System.out.println("item "+item+" already exist in the list");
 		
 			else
-			{
-				Node<T> newNode = new Node<T>(item);
-				last.setNext(newNode);
-				last = newNode;
+			{											
+				Node<T> newNode = new Node<T>(item);		//else store item in temp node
+				last.setNext(newNode);						//next of last will reger to to tempNode
+				last = newNode;								//tempNode added will be the last node
 			}
 		}
 
@@ -157,16 +157,17 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 				System.out.println("List is empty...!");
 				return null;
 			}
-			if(first == last) {//remove the only item in the list
+			if(first == last) {							//remove the only item in the list
 				first = last = null;
 				return first.getData();
 			}
 			Node<T> curr = first;
 			Node<T> prev = first;
-			while(curr.getNext() != null) {//traverse to reach the last item in the list
+			while(curr.getNext() != null) {				//traverse to reach the last item in the list
 				prev = curr;
 				curr = curr.getNext();
 			}
+			
 			//remove the curr item which is the last item in the list
 			last = prev;
 			last.setNext(null);
@@ -175,16 +176,16 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 		
 		public T pop(int pos)
 		{
-			if(isEmpty())
+			if(isEmpty())									//if list is empty
 			{
 				System.out.println("List is empty...!");
 				return null;
 			}
-			Node<T> curr = first;
-			Node<T> prev = first;
+			Node<T> curr = first;							//inititalizze curr to first
+			Node<T> prev = first;							//initialize prev to first
 		
-			int  count = -1;
-			while(curr != null) 
+			int  count = -1;								//to delete at given index do pos-1.
+			while(curr != null) 							
 			{
 				//traverse to reach the last item in the list
 				count++;

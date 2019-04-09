@@ -22,7 +22,7 @@ public class TestBankCashCounter {
 			System.out.println("Enter the name of "+i +"st person");
 			String name= sc.next();
 			boolean t =m.enqueue(name); 	
-			if(t==false) //to check name inserted or not
+			if(t==false) 				//to check name inserted or not
 			{
 				System.out.println("person not added");
 			}
@@ -46,7 +46,7 @@ public class TestBankCashCounter {
 				amount=sc.nextInt();
 
 				balance= balance + amount; 
-				m.dequeue();
+			
 
 				System.out.println("New balance is: "+balance);
 				break;
@@ -55,7 +55,7 @@ public class TestBankCashCounter {
 				amount=sc.nextInt();
 
 				balance= balance - amount; 
-				m.dequeue();
+				
 
 				System.out.println("New balance is: "+balance);
 				break;

@@ -20,11 +20,11 @@ public class PalindromeChecker {
 				m.rearenque(c[i]);	
 			}
 			 
-//			System.out.println("\n"+"The New MyDeque array is: "+"\n"+ m);
+
 			System.out.println("\n"+"Matching both the queue:----input String and MyDeque");	
-		    	boolean status=true; //to store condition-->matched or not
+		    	boolean status=true; 				//to store condition-->matched or not
 		    	 
-		    	  //to traverse each element of the Deque and match with Char Array{i/p string} 
+		    	  //to traverse each element of the Deque and match with Char Array(input string) 
 		    	  
 				for(int i=0 ; i<c.length ;i++)
 				{

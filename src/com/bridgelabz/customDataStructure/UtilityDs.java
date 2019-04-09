@@ -91,7 +91,7 @@ public class UtilityDs {
 		return true;							// else no is prime.
 	}
 	//****************************************************************************
-	public static int[] PrimeNumber(int range) 
+	public static int[] PrimeNumber(int range) 	//
 	{
 		boolean isPrime = true;
 		int count = 0;
@@ -224,8 +224,8 @@ public class UtilityDs {
 		
 		public static int hashFunction(int num)
 		{
-			int reminder=num%11;
-			return reminder;
+			int remainder=num%11;
+			return remainder;
 		}
 
 		
@@ -315,7 +315,7 @@ public class UtilityDs {
 				int d0 = (d + x + 31 * m0 / 12) % 7;
 
 				int start = d0;										//initialize startDay with d0.
-				int totalDaysOfMonth = 0, count = 1;				
+				int totalDaysOfMonth = 0, count = 1;				//count is to track dates in a month max upto 31.
 				if (month == 2) {
 					if (isLeapYearForCalander(year)) 				//if userMonth is 2, if leap year days = 29
 						totalDaysOfMonth = 29;

@@ -45,7 +45,7 @@ public class TestBalancedParanthesis {
 			System.out.println("unbalanced");
 	} catch (Exception e) {
 		// TODO: handle exception
-		System.out.println("Unbalanced Equation");
+		System.out.println("invalid Equation");
 	}
 	
 	}

@@ -13,7 +13,7 @@ public class DequeImplementation<T> {
 		object=new Object[size];
 	}
 	
-	/*Deque follows  insertion from both the ends
+	/*
 	 * Method to add element form front end
 	 * @para object;
 	 * @return object;
@@ -33,12 +33,12 @@ public class DequeImplementation<T> {
 		
 	}
 
-	/*Deque follows insertion and deletion form both ends
+	/*
 	 * Method to remove from front end	
 	 * @return object .
 	 */
 	
-	public Object frontdequeue() //remove element from front //here
+	public Object frontdequeue() 				//remove element from front 
 	{   
 		if(front==-1)
 		{

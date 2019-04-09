@@ -18,10 +18,10 @@ public class QueueForCalendar {
 		int totalDaysOfMonth = 0, count = 1;				//count keeps track of days(1-31)
 		if (month == 2) 
 		{
-			if (QueueForCalendar.isLeapYear(year)) // if leap year days = 29
+			if (QueueForCalendar.isLeapYear(year)) 			// if leap year days = 29
 				totalDaysOfMonth = 29;
 			else
-				totalDaysOfMonth = 28; // if not leap year days= 28
+				totalDaysOfMonth = 28; 						// if not leap year days= 28
 		} else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
 			totalDaysOfMonth = 31;
 		else
@@ -32,18 +32,18 @@ public class QueueForCalendar {
 			start--;
 		}
 
-		while (count <= totalDaysOfMonth) {				// enque value of count till count is less than equal to totalno of dy
-			if (count <= 9)								//for count = single digit value..
-				q1.enque(String.valueOf(count) +"  "); // add count value to the queue and give 2 space
+		while (count <= totalDaysOfMonth) {					// enque value of count till count is less than equal to totalno of dy
+			if (count <= 9)									//for count = single digit value..
+				q1.enque(String.valueOf(count) +"  "); 		// add count value to the queue and give 2 space
 			else
-				q1.enque(String.valueOf(count) + " "); // add count value to the queue
+				q1.enque(String.valueOf(count) + " "); 		// add count value to the queue
 			count++;
 		}
 
 		System.out.println(s[month - 1] + " " + year);
 		System.out.println("S  M  T  W  T  F  S");
 		count = 1;
-		while (!q1.isEmpty()) 							// traverse till queue is not empty
+		while (!q1.isEmpty()) 								// traverse till queue is not empty
 		{
 			String result = q1.deque();
 			System.out.print(result);

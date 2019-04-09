@@ -10,7 +10,7 @@ import com.bridgelabz.customDataStructure.UtilityDs;
 public class PrimeAnagramQueue {
 	static int counter=0;
 	static QueueForAnagram<Integer>  que=new QueueForAnagram<Integer>();
-	/**
+	/*
 	 * to find Prime and Anagram of given range nos 
 	 * @param start : range start of nos to check prime and anagarm
 	 * @param end   : range end
@@ -25,10 +25,10 @@ public class PrimeAnagramQueue {
 		//to find prime nos of the input range
 		for (int i = start; i <= end; i++)
 		{  
-			//#1//call goes to isPrime method--to check prime or not
+			//call isprime method to check if given num is prime.
 			if (UtilityDs.isPrime(i)) 
 			{  	
-				primearr[counter]=i; //insert no--->if it is prime
+				primearr[counter]=i; 		//insert no--->if it is prime
 
 				counter++;
 			}  
@@ -47,8 +47,8 @@ public class PrimeAnagramQueue {
 		//getting the prime nos store in----primearr[]
 		for (int j=0; j<counter; j++)
 		{  
-			//#2//call goes to get palindrome of a  no
-			int reverse= UtilityDs.anagram(primearr[j]);  //palindrome of each primeno---of primearr[]
+			//call goes to get anagaram of the primeNO.
+			int reverse= UtilityDs.anagram(primearr[j]);  
 
 			//matching the palindrome of every no---with the Array ele(of prime no)
 			for(int k=0; k<=counter; k++)
@@ -68,11 +68,11 @@ public class PrimeAnagramQueue {
 	{   
 		Scanner sc = new Scanner(System.in);
 		//take input start range of nos to find prime
-		System.out.print("Enter the first number : ");  
+		System.out.print("Enter the start of  range : ");  
 		int start = sc.nextInt();
 
 		//take input end range of nos to find prime
-		System.out.print("Enter the second number : ");  
+		System.out.print("Enter the End of Range : ");  
 		int end = sc.nextInt();
 
 		//print range to nos whose pprime to be find

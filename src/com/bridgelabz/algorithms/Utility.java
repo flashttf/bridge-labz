@@ -105,7 +105,7 @@ public class Utility {
 	
 	////////----------InsertionSort method------------------//////////////
 	
-	public static int[] insert(int[] arr) {
+	public static int[] insertSort(int[] arr) {
 		for(int i=1;i<arr.length;i++) {
 			int key=arr[i];
 			int j=i-1;
@@ -159,11 +159,12 @@ public class Utility {
 		
 		String s1=sort(string1.toCharArray());
 		String s2=sort(string2.toCharArray());
+		
 		//If length is not equal Strings are not anagram
 		if(string1.length()!=string2.length()) {
 			return false;
 		}
-//		for(int i=0;i<string2.length();i++) {				//checking anagram by index.if index is p
+//		for(int i=0;i<string2.length();i++) {				//checking anagram by indexOf index is p
 //			char c=string1.charAt(i);
 //			if(string2.indexOf(c)==-1) 
 //				return false;
@@ -398,11 +399,6 @@ public class Utility {
 		}
 	}
 	//<----------------------------------------------------------------->//
-		
-		/*@ Method to create a file.
-		 * 
-		 * 
-		 */
 		
 		
 }

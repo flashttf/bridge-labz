@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Myqueue<T> {	
 	int size;
 	
-	Object s[];								//create object array 
+	Object s[];										//create object array 
 
 	int front,rear = -1;
 	
@@ -15,7 +15,7 @@ public class Myqueue<T> {
 		
 	
 		
-	/**
+	/*
 	 * to check if the array(queue) is empty
 	 * @return boolean
 	 */
@@ -31,7 +31,7 @@ public class Myqueue<T> {
 			return false;	
 	}
 
-	/**
+	/*
 	 * to add element from rear end 
 	 * @param o
 	 * @return : object
@@ -46,8 +46,8 @@ public class Myqueue<T> {
 		s[++rear]= object;
 		return true;
 	}
-	/**
-	 * so to remove element from the Front end 
+	/*
+	 * to remove element from the Front end 
 	 * @return  :  object
 	 */
 	public Object dequeue()
@@ -74,7 +74,7 @@ public class Myqueue<T> {
 
 	public int size() 
 	{
-		// TODO Auto-generated method stub
+		
 		return size;
 }
 }

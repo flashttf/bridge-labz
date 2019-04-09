@@ -9,7 +9,7 @@ public class QueueForAnagram<T> {
 	
 		
 		@SuppressWarnings("unchecked")
-		public void enque(int data)  //like
+		public void enque(int data)  
 		{
 			
 			@SuppressWarnings("rawtypes")
@@ -17,23 +17,22 @@ public class QueueForAnagram<T> {
 			node.data = data;
 			node.next = null;
 			
-				//if the LIST is empty  then insert node---when List is empty
+				//if the LIST is empty  then insert node
 				if(front==null)
 				{
 					 front=node;
 					 rear =node;
 					 
-					 node.next= null;	/*same as---another way
-					 						front.next= null;
-					 					     rear.next= null;
-					 					*/
+					 node.next= null;	
+					 					    
+					 					
 				}
 				else
 				{   
 				//here i.e rear++
 					rear.next = node;  		//joining the rear--pointed ele  with
 												//to the new node
-					     rear = node;  		//then {change---rear} , point the rear to the node 
+					     rear = node;  		//then change rear, point the rear to the node 
 					
 				    node.next = null;  		//now point the new node.next to NULL
 				}
@@ -42,7 +41,7 @@ public class QueueForAnagram<T> {
 		@SuppressWarnings({ "unused", "rawtypes" })
 		public int deque()
 		{
-			int z=0;
+			int z=0;								// variable to store dequed data.
 			
 			Node temp;
 			

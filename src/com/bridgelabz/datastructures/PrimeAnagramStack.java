@@ -13,8 +13,8 @@ static int counter=0;
 	@SuppressWarnings("rawtypes")
 	static Stack slt=new Stack ();
 	
- 	 /**
- 	  * to find Prime and Anagram----of given range numbers 
+ 	 /*
+ 	  * to find Prime and Anagram of given range numbers 
  	  * @param start :range start of number to check prime and anagram
  	  * @param end   :end range
  	  * @return		:void
@@ -38,7 +38,7 @@ static int counter=0;
 		  			}  
 		  	}  
 		  	
-			//to print normal array---of prime nos
+			//to print normal array of prime nos
 		  	for (int k=0; k<counter; k++)
 			  	{  
 			  			System.out.print(primearr[k]+" ");
@@ -48,12 +48,12 @@ static int counter=0;
 		  	System.out.println("Now prime and anagram nos r as follows:");
 		  	System.out.println(" ");
 		  	
-		  	//getting the prime nos store in----primearr[]
+		  	//getting the prime nos store in primearr[]
 		  	for (int j=0; j<counter; j++)
 		  	{  		 
 		  		int reverse= UtilityDs.anagram(primearr[j]);  //palindrome of each primeno---of primearr[]
 		  		 
-		  		 //matching the palindrome of every no---with the Array(of prime no)
+		  		 //matching the palindrome of every no with the Array(of prime no)
 		  	     for(int k=0; k<counter; k++)
 		  	     {
 		  	    	 if(primearr[k]==reverse)  //if matched then add prime no and anagram to Linked List
