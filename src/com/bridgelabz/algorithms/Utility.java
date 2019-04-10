@@ -295,6 +295,23 @@ public class Utility {
 			return digits;
 		}
 	}
+	//------------------------------------------------------------------------------------------------------------------//
+	public static long countDigits(long n) {
+		long digits=0;
+		long r;
+		long temp;
+		if(n==0) {
+			return 1;
+		}
+		else {
+			temp=n;
+			while(n!=0) {
+				++digits;
+				n=n/10;
+			}
+			return digits;
+		}
+	}
 	//<----------------------------------------------------------------->//
 	
 	//////////////////-----------Binary Search Integer(Sorted array only)------//////////////

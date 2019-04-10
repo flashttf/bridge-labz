@@ -24,12 +24,10 @@ public class QueueForAnagram<T> {
 					 rear =node;
 					 
 					 node.next= null;	
-					 					    
-					 					
-				}
+		 		}
 				else
 				{   
-				//here i.e rear++
+				//here i.e rear++ i
 					rear.next = node;  		//joining the rear--pointed ele  with
 												//to the new node
 					     rear = node;  		//then change rear, point the rear to the node 

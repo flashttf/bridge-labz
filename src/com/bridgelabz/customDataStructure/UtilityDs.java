@@ -79,7 +79,7 @@ public class UtilityDs {
 			return false;  
 		} 
 		for(int i=2; i<=n/2; i++)				// traversing from 2 to n/2 instead of n-1 to save unnecessary loops.
-	     {
+	     { 
  
 			int rem=n%i;
 			if(rem==0)							// if remainder of any of n%i is zero				
@@ -91,7 +91,7 @@ public class UtilityDs {
 		return true;							// else no is prime.
 	}
 	//****************************************************************************
-	public static int[] PrimeNumber(int range) 	//
+	public static int[] PrimeNumber(int range) 	//method find prime nos in given range
 	{
 		boolean isPrime = true;
 		int count = 0;
@@ -115,11 +115,11 @@ public class UtilityDs {
 	}
 	//****************************************************************************
 
-	public static int[] checkAnagram(int[] primenumber)
+	public static int[] checkAnagram(int[] primenumber)				//method to check anagram
 	{
 		System.out.println("\nThe prime number which are Anagram:");
 		int anagram = 0;
-		int[] anagramArray = new int[primenumber.length]; 
+		int[] anagramArray = new int[primenumber.length]; 			
 		for (int  i = 0; i < primenumber.length; i++)
 		{
 			for (int j = 0; j < primenumber.length; j++)
@@ -140,9 +140,9 @@ public class UtilityDs {
 		return anagramArray;				        
 	}
 	//****************************************************************************
-	public static void twoDPrimeAnagram(int[] anagram)
+	public static void twoDPrimeAnagram(int[] anagram)	
 	{
-		int row = 20 ,column = 26;								
+		int row = 20 ,column = 26;							//no of rows and colums for 2d Array			
 		int[][] anagramArray = new int[row][column];
 		int temp = 100 , k=0;
 		for(int i = 0 ;i<row; i++)

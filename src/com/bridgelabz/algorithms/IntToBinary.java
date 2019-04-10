@@ -20,13 +20,8 @@ public class IntToBinary {
 		for (int i = str.length()-1; i >=0; i--) {
 			if(str.charAt(i)=='1') {
 				x=(int)Math.pow(2,i);
-				System.out.print(x);
-				
-				System.out.print(" + ");
-				
-		}
-			
-		}
+				System.out.print(x+"+");
+			}
 		}
 	}
-
+}	

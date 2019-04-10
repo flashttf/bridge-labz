@@ -27,7 +27,6 @@ public class Coupon {
 				isCollected[value]=true;
 			}
 		}
-		
 		return count;
 		
 	}
