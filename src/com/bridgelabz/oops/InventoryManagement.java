@@ -21,7 +21,7 @@ public class InventoryManagement implements Serializable{
 		
 		try {
 		
-			JsonNode node=mapper.readTree(file);					
+			JsonNode node=mapper.readTree(file);					//JsonNode object 
 //			System.out.println(node);
 			
 			do {
@@ -33,7 +33,7 @@ public class InventoryManagement implements Serializable{
 					System.out.println("Enter correct choice");
 				}
 				
-			} while (choice<0||choice>4);
+			} while ((choice<0||choice>4));
 			
 			String product="";											//variable to store product value from file.
 			
@@ -48,23 +48,30 @@ public class InventoryManagement implements Serializable{
 			break;
 
 			default:
-//				System.out.println("Please Enter correct choice");
+				
 				break;
 			}
 			
-			
+
+			int totalValueOfEachItem=0;
 			JsonNode inventory=node.findPath(product);
 			System.out.println();
 			
-			for(JsonNode node1:inventory) {								//for each loop over every node in tree						
-				String name=node1.findPath("name").asText();
-				String weight=node1.findPath("weight").asText();
-				String price=node1.findPath("price").asText();
+			for(JsonNode node1:inventory) {
+				//for each loop over every node in tree						
+				String name=node1.findPath("name").asText();		
 				
-				System.out.println("Name of item:\t"+name+"\nWeight:\t\t"+weight+" kg\nPrice per kg:\t"+price+" rupees");
+				int weight=node1.findPath("weight").asInt();
+
+				
+				int price=node1.findPath("price").asInt();
+
+				
+				totalValueOfEachItem=weight*price;
+				System.out.println("Name of item:\t"+name+"\nWeight:\t\t"+weight+" kg\nPrice per kg:\t"+price+" rupees\nTotal Value:\t"+totalValueOfEachItem);
 				System.out.println();
 			}
-			
+//			System.out.println(totalValueOfEachItem);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -28,14 +28,26 @@ public static void main(String[] args) {
 		while((tempString=bufferedReader.readLine())!=null) {						//reading file content and storing in temp variable
 			fileString+=tempString;													//appending temp variable data to new string variable
 		}
-		
 		System.out.println(fileString);
 		
+		String name="";
+		String lName="";
+	
+		do {
 		System.out.println("Enter First name");						//taking user input
-		userDetails.setFirstName(scan.next());
+		name=scan.next();
+		userDetails.setFirstName(name);
+		}while(!name.matches("[a-zA-Z ,]+"));
 		
+		
+//		
+		
+		do {
 		System.out.println("Enter last name");
-		userDetails.setLastName(scan.next());
+		name=scan.next();
+		userDetails.setLastName(lName);
+		}while(!name.matches("[a-zA-Z ,]+"));
+		
 		
 		long phoneNo=0;												///phone number 			
 		String tempPhoneNo;
@@ -56,7 +68,7 @@ public static void main(String[] args) {
 		userDetails.setMobileNo(Long.toString(phoneNo));			//converting long type to string
 			
 
-		Date date=new Date();
+		Date date=new Date();										//Date Object to 
 		String dateString=DateFormat.getInstance().format(date);
 //		System.out.println("Enter Date in dd/mm/yyyy format");
 		userDetails.setDate(dateString);
