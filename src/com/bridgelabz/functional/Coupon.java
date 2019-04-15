@@ -28,7 +28,6 @@ public class Coupon {
 			}
 		}
 		return count;
-		
 	}
 	
 	public static void main(String[] args) {

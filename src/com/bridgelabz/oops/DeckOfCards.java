@@ -4,7 +4,7 @@ public class DeckOfCards {
 	
 	String suits[]= {"Clubs", "Diamonds", "Hearts", "Spades"};
 	String ranks[]= {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-	
+	String playerCards[][]=new String[5][15];
 	//totalNoOfcards
 	int totalNoOfCards=suits.length*ranks.length;
 	
@@ -14,15 +14,16 @@ public class DeckOfCards {
 	
 	public  void getDeckOfCards() {
 		
-		for(int i=0;i<suits.length;i++) {					//assigning
+		for(int i=0;i<suits.length;i++) {					//assigning  cards in a deck
 			for(int j=0;j<ranks.length;j++) {
 				deck[l]=suits[i]+" "+ranks[j];
 				l++;
+				
 			}
-		}
+		}System.out.println(l);
 	}
 	
-	public  void shuffleCards() {
+	public  String[] shuffleCards() {
 		for(int i=0;i<totalNoOfCards;i++) {
 			int random=(int)Math.random()*(totalNoOfCards);		//generating integer random number
 			
@@ -30,9 +31,20 @@ public class DeckOfCards {
 			deck[random]=deck[i];
 			deck[i]=tempPos;
 		}
-		
+		return deck;
 	}
 	
+	public String[][] distribute(String[] deck){
+		int k=0;
+		for(int i=0;i<ranks.length;i++) {
+			for(int j=0;j<suits.length;j++) {
+				playerCards[i][j]=deck[k];
+				deck[k]=" ";
+				k++;
+			}
+		}
+		return playerCards;
+	}
 	public void printDistributedCards(int m,int n) {
 //		String[][] cardsDistributed=new String[m][n];
 		
@@ -41,8 +53,8 @@ public class DeckOfCards {
 			 System.out.println("===Player " + (i + 1) + "==== ");
 			    for (int j = 0; j < n; j++) {			//distributing n cards	
 			        System.out.println(deck[i + j * 4] );
-			    }System.out.println();
-			    
-			}
+			    }
+			    System.out.println();
+		}
 	}
 }

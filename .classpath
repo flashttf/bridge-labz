@@ -4,5 +4,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/home/admin1/Downloads/jackson-core-asl-1.9.13.jar"/>
 	<classpathentry kind="lib" path="/home/admin1/Downloads/jackson-mapper-asl-1.9.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/json jackson-20190415T111126Z-001/json jackson/Jar files/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/json jackson-20190415T111126Z-001/json jackson/Jar files/jackson-annotations-2.9.8.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/json jackson-20190415T111126Z-001/json jackson/Jar files/jackson-core-2.9.8.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/json jackson-20190415T111126Z-001/json jackson/Jar files/jackson-databind-2.9.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
