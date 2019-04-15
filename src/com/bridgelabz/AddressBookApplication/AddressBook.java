@@ -101,7 +101,7 @@ public class AddressBook {
 	 *  
 	 */
 	public void addPerson(String firstName,String lastName,String address,String cityName,String stateName,String zipCode,String phoneNo) {
-		PersonInfo newPersonInfo=new PersonInfo(lastName,firstName,address,cityName,stateName,zipCode,phoneNo);
+		PersonInfo newPersonInfo=new PersonInfo(firstName,lastName,address,cityName,stateName,zipCode,phoneNo);
 		personList=FileSystem1.getList();
 		personList.add(newPersonInfo);
 		FileSystem1.setList(personList);

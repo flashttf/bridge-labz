@@ -13,12 +13,12 @@ public class TasksToPerform {
 			System.out.println("Enter the choice:");
 			System.out.println("1. Create New Address Book");
 			System.out.println("2. Open existing Address Book");
-			System.out.println("3. Add Person");
-			System.out.println("4. Edit Person");
-			System.out.println("5. Remove Person");
-			System.out.println("6. Sort entries by name");
-			System.out.println("7. Sort entries by zip");
-			System.out.println("8. Print entries");
+			System.out.println("3. Add Person in Address Book");
+			System.out.println("4. Edit PersonInformation in Address Book");
+			System.out.println("5. Remove Person from addressBook");
+			System.out.println("6. Sort entries by person's name");
+			System.out.println("7. Sort entries by zip code");
+			System.out.println("8. Print entries present in the address-book");
 			System.out.println("9. Save Address Book");
 			System.out.println("10.Save As Address Book");
 			System.out.println("11.Quit Program");
