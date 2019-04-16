@@ -54,6 +54,7 @@ public class InventoryManagement implements Serializable{
 			
 
 			int totalValueOfEachItem=0;
+			int totalValueOfAllItems=0;
 			JsonNode inventory=node.findPath(product);
 			System.out.println();
 			
@@ -68,10 +69,12 @@ public class InventoryManagement implements Serializable{
 
 				
 				totalValueOfEachItem=weight*price;
+				totalValueOfAllItems+=totalValueOfEachItem;
 				System.out.println("Name of item:\t"+name+"\nWeight:\t\t"+weight+" kg\nPrice per kg:\t"+price+" rupees\nTotal Value:\t"+totalValueOfEachItem);
 				System.out.println();
+				
 			}
-//			System.out.println(totalValueOfEachItem);
+			System.out.println("Total Value:\t"+totalValueOfAllItems);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

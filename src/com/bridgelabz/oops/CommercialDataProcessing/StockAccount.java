@@ -22,8 +22,8 @@ public class StockAccount implements StockInterface{
 	
 	static ObjectMapper objectMapper=new ObjectMapper();
 	
-	File customerFile=new File("/home/admin1/Desktop/pawan/Customer.json");
-	File companyShareFile=new File("/home/admin1/Desktop/pawan/CustomerShares.json");
+	File customerFile=new File("/home/admin1/Desktop/pawan/Customer1.json");
+	File companyShareFile=new File("/home/admin1/Desktop/pawan/CompanyShares.json");
 	
 	 public StockAccount() {							//Constructor
 		// TODO Auto-generated constructor stub

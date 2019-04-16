@@ -37,22 +37,28 @@ public static void main(String[] args) {
 		JsonNode rootNode=node.findPath("stock");
 		
 		for(JsonNode tempNode:rootNode) {
-			String stock_name=tempNode.findPath("stock_name").asText();
-			al_stock.add(stock_name);
+			String stockName=tempNode.findPath("stockName").asText();
+			al_stock.add(stockName);
+			System.out.println("Stock Name\t\t\t"+stockName);
 			
-			int no_of_shares=tempNode.findPath("no_of_shares").asInt();
-			al_stock.add(no_of_shares);
+			int noOfShares=tempNode.findPath("noOfShares").asInt();
+			al_stock.add(noOfShares);
+			System.out.println("No of shares\t\t\t"+noOfShares);
 			
-			int share_price=tempNode.findPath("share_price").asInt();
+			int sharePrice=tempNode.findPath("sharePrice").asInt();
 			
-			value_eachStock=no_of_shares*share_price;
+			
+			value_eachStock=noOfShares*sharePrice;
 			al_stock.add(value_eachStock);
-			
+			System.out.println("Value of "+stockName+" Stock\t\t"+value_eachStock);
 			total_value+=value_eachStock;
+			System.out.println("==========================================");
 		}
 		al_stock.add(total_value);
 		
 		mapper.writeValue(oututFile,al_stock);
+		
+		System.out.println("Total Value\t\t\t"+total_value);
 	
 	  } 
 		catch (Exception e) {

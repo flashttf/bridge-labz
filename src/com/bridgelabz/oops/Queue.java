@@ -1,4 +1,4 @@
-package commercial;
+package com.bridgelabz.oops;
 
 public class Queue<T> 
 {
