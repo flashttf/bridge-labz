@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	//output file address
 	String outputFilePath="/home/admin1/Desktop/pawan/stockexchangeop.json";
 	
-	//object inputfile
+	//object inputfile    
 	File inputFile=new File(inputFilePath);	
 	
 	//object outputfile
@@ -32,7 +32,7 @@ public static void main(String[] args) {
 	int total_value=0;
 	
 	try {
-		
+		                                           
 		JsonNode node=mapper.readTree(inputFile);
 		JsonNode rootNode=node.findPath("stock");
 		
@@ -54,6 +54,7 @@ public static void main(String[] args) {
 			total_value+=value_eachStock;
 			System.out.println("==========================================");
 		}
+		
 		al_stock.add(total_value);
 		
 		mapper.writeValue(oututFile,al_stock);

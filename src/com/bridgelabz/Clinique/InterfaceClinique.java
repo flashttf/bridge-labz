@@ -7,7 +7,8 @@ public interface InterfaceClinique {
 	String available="";
 	String mobNumber="";
 	int age=0;
-	String doctorFile = "/home/admin1/Desktop/pawan/Docter.json";
+	
+	String doctorFile = "/home/admin1/Desktop/pawan/Doctor.json";
 	
 	String patientFile = "/home/admin1/Desktop/pawan/Patient.json";
 	String appointmentFile = "/home/admin1/Desktop/pawan/Appointment.json";

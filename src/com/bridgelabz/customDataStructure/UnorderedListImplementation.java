@@ -76,7 +76,7 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 				}
 				else
 				{
-					prev = temp;							//
+					prev = temp;							
 					temp = temp.next;
 				}
 			}
@@ -255,5 +255,5 @@ public class UnorderedListImplementation<T> implements interfaceUnorderedList<T>
 			}
 			System.out.println(item + "not found in the list...!");
 			return -1;
-}
+		}
 }

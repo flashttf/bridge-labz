@@ -73,8 +73,13 @@ public class PersonInfo {
 		return "PersonInfo[firstName: "+firstName+ ",lastName: "+lastName+",address: "+address+",cityName: "+cityName+",stateName: "+stateName+",zipCode: "+zipCode+",phoneNo:"+phoneNo+"]";
 	}
 	
-	public void updatePerson(String address, String cityName, String stateName, String zipCode, String phoneNo)
-	{
-		
-}
+//	public void updatePerson(String address, String cityName, String stateName, String zipCode, String phoneNo)
+//	{	
+//		
+//		setAddress(address);
+//		setCityName(cityName);
+//		setStateName(stateName);
+//		setZipCode(zipCode);
+//		setPhoneNo(phoneNo);
+//	}
 }

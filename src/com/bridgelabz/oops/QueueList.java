@@ -19,7 +19,7 @@ static Node head;
 	{
 		int count=0;
 		Node<T> temp=head;
-		int i=0;
+		
 		while(temp!=null)
 		{
 			temp=temp.next;

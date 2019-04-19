@@ -22,7 +22,7 @@ public class DeckOfCards {
 	public void shuffleCard() {								//shuffle Cards
 		Random random = new Random();
 		for (int i = 0; i < cards.length; i++) {
-			int index = random.nextInt(52);
+			int index = random.nextInt(52);					//random no genrator between 0 to 52. 0 inclusive and 52 exlcusive
 			String temp = cards[index];
 			cards[index] = cards[i];
 			cards[i] = temp;
@@ -44,15 +44,14 @@ public class DeckOfCards {
 
 	public void displayCards(String[][] playerCards) {					//display cards
 		int i = 1;
-		for (String[] playerCard : playerCards) {
+		for (String[] player : playerCards) {
 			System.out.println();
 			System.out.println("player :" + (i++) + " cards : ");
 
-			for (String card : playerCard) {
+			for (String card : player) {
 				System.out.print(card + "  ");
 			}
 			System.out.println();
-
 		}
 	}
 
@@ -65,7 +64,5 @@ public class DeckOfCards {
 		String playerCards[][] = deck.distribute(4, 9);
 
 		deck.displayCards(playerCards);
-
 	}
-
 }

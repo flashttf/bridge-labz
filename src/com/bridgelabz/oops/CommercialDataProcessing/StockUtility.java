@@ -19,7 +19,7 @@ public class StockUtility {
 	
 	public static void addAccount(String fileName) {
 		Scanner scan=new Scanner(System.in);
-		fileName="/home/admin1/Desktop"+fileName;
+		fileName="/home/admin1/Desktop/"+fileName;
 		
 		try {
 			List<Customer> customerList = objectMapper.readValue(new File(fileName),new TypeReference<List<Customer>>() {});
@@ -44,6 +44,7 @@ public class StockUtility {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 

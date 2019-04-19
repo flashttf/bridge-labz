@@ -31,7 +31,7 @@ public class CliniqueManager implements InterfaceClinique
 			while(value)
 			{
 				
-				System.out.println("----------------------------------------------------------------------");
+				System.out.println("------------------------------------------------------------------------");
 				System.out.println("Enter the choice");
 				System.out.println("1. Add Doctor");
 				System.out.println("2. Add Patient");
@@ -44,7 +44,7 @@ public class CliniqueManager implements InterfaceClinique
 				System.out.println("9. Popular Doctor in Clinic!");
 				System.out.println("10.Our Popular Specialization!");
 				System.out.println("11.Exit");
-				System.out.println("__________________________________________________________________________");
+				System.out.println("___________________________________________________________________________");
 				int choice = scan.nextInt();
 				switch (choice) 
 				{

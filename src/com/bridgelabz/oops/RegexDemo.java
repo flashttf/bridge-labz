@@ -26,7 +26,7 @@ public static void main(String[] args) {
 		String fileString="";
 		String tempString="";
 		while((tempString=bufferedReader.readLine())!=null) {						//reading file content and storing in temp variable
-			fileString+=tempString;													//appending temp variable data to new string variable
+			fileString+=tempString;	                                                                                                                                                                        												//appending temp variable data to new string variable
 		}
 		System.out.println(fileString);
 		
@@ -50,10 +50,6 @@ public static void main(String[] args) {
 		
 		
 		long phoneNo=0;												///phone number 			
-		String tempPhoneNo;
-		
-		
-		
 		try {
 			do {
 			System.out.println("Enter Phone No");

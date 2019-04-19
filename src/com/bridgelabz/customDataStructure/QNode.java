@@ -8,6 +8,4 @@ public class QNode<T> {
 		this.key=key;
 		this.next=next;
 	}
-	
-
 }

@@ -18,6 +18,7 @@ public class AddressBook {
 		
 	}
 	
+	//getters and setters
 	public List<PersonInfo> getPersonList() {
 		return personList;
 	}

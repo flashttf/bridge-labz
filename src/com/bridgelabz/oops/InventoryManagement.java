@@ -30,7 +30,7 @@ public class InventoryManagement implements Serializable{
 				try {
 					choice=scan.nextInt();
 				} catch (Exception e) {
-					System.out.println("Enter correct choice");
+					System.out.println("Please Enter correct choice");
 				}
 				
 			} while ((choice<0||choice>4));
@@ -39,13 +39,13 @@ public class InventoryManagement implements Serializable{
 			
 			switch (choice) {
 			case 1:product="Rice";
+				   break;
 				
-				break;
 			case 2:product="Pulses";
+				   break;
 			
-			break;
 			case 3:product="Wheat";
-			break;
+			       break;
 
 			default:
 				
@@ -55,6 +55,7 @@ public class InventoryManagement implements Serializable{
 
 			int totalValueOfEachItem=0;
 			int totalValueOfAllItems=0;
+			
 			JsonNode inventory=node.findPath(product);
 			System.out.println();
 			
@@ -72,9 +73,10 @@ public class InventoryManagement implements Serializable{
 				totalValueOfAllItems+=totalValueOfEachItem;
 				System.out.println("Name of item:\t"+name+"\nWeight:\t\t"+weight+" kg\nPrice per kg:\t"+price+" rupees\nTotal Value:\t"+totalValueOfEachItem);
 				System.out.println();
-				
 			}
-			System.out.println("Total Value:\t"+totalValueOfAllItems);
+			
+			System.out.println("==================================================");
+			System.out.println("Total Value:1\t"+totalValueOfAllItems);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

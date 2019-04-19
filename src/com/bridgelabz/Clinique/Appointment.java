@@ -6,7 +6,7 @@ public class Appointment {
 	private String patientName;
 	private String date;
 	private int docAppointmentCount;
-
+	
 	public Appointment()
 	{
 		

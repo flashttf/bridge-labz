@@ -36,8 +36,7 @@ public interface IntefaceAddress {
 	
 	public static void toReadFile(File file) {
 		try {
-			FileSystem1.setList(objectMapper.readValue(file, new TypeReference<List<PersonInfo>>() {
-			}));
+			FileSystem1.setList(objectMapper.readValue(file, new TypeReference<List<PersonInfo>>() {}));
 		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();

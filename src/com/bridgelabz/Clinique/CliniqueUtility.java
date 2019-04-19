@@ -10,19 +10,19 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CliniqueUtility implements InterfaceClinique {
-	private static final String mobNum = null;
+//	private static final String mobNum = null;
 	public static ObjectMapper objectMapper = new ObjectMapper();
 	static Scanner scannnerString = new Scanner(System.in);
 	static Scanner scannerInteger = new Scanner(System.in);
 
 	public static void addDocter(List<Doctor> docterList) {
-		System.out.println("Enter Docter Name");
+		System.out.println("Enter Doctor Name");
 		String docterName = scannnerString.nextLine();
-		System.out.println("Enter Id of Docter ");
+		System.out.println("Enter Id of Doctor ");
 		int id = scannerInteger.nextInt();
 		System.out.println("Enter the Specialization");
 		String speclization = scannnerString.nextLine().toUpperCase();
-		System.err.println("Enter Availability");
+		System.out.println("Enter Availability");
 		String availability = scannnerString.nextLine().toUpperCase();
 		Doctor newDoctor = new Doctor(docterName, id, speclization, availability);
 		docterList.add(newDoctor);
@@ -45,7 +45,7 @@ public class CliniqueUtility implements InterfaceClinique {
 	public static void addPatient(List<Patient> patientList) {
 		System.out.println("Enter the patientName");
 		String patientName = scannnerString.nextLine();
-		System.out.println("Etner id of patient");
+		System.out.println("Enter id of patient");
 		int id = scannerInteger.nextInt();
 		System.out.println("Enter The PhoneNumber");
 		String phoneNumber = scannnerString.nextLine();

@@ -7,6 +7,10 @@ public class ManageAddressBook {
 	static AddressBook addressBook=new AddressBook();
 	static Scanner scan=new Scanner(System.in);
 	
+	/*
+	 * Method to Create new Addressbook
+	 */
+	
 	public static void addNewCustomerBook() {
 		String response=null;
 		if(addressBook.getFile()!=null) {
@@ -27,6 +31,9 @@ public class ManageAddressBook {
 	
 	//------------------------------------------------//
 	
+	/*
+	 * Method to Open addresss book
+	 */
 	public static void openExistingAddressBook() {
 		String response=null;
 		if(addressBook.getFile()!=null) {
@@ -47,6 +54,10 @@ public class ManageAddressBook {
 	}
 	
 	//--------------------------------------------------------------//
+	
+	/*
+	 * Method to add new Person's Info in addressbook 
+	 */
 	public static void addPersonInAddressBook() {
 		if(addressBook.getFile()!=null) {
 			System.out.println("Enter First Name");
@@ -71,7 +82,9 @@ public class ManageAddressBook {
 		}
 	}
 	//----------------------------------------------------------------------------//
-	
+	/*
+	 * Method to Update person's information
+	 */
 	public static void updatePersonInAddressBook() {
 		if (addressBook.getFile() != null) {
 			System.out.println("search person by first name: ");

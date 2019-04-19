@@ -2,6 +2,8 @@ package com.bridgelabz.oops;
 
 import java.util.Scanner;
 
+import com.bridgelabz.algorithms.Utility;
+
 public class DeckOfCardsUsingQueue extends DeckOfCards { 			//extending the DeckOfCards class
 
 	public static void main(String args[]) {
@@ -22,13 +24,11 @@ public class DeckOfCardsUsingQueue extends DeckOfCards { 			//extending the Deck
 
 				Queue q = new Queue(playerCard.length);
 				q.enqueue(card);//store it into the queue
+				
 				System.out.print(card+"  ");
 			}
 			System.out.println();
-
 		}
-		
-
 	}
 
 }

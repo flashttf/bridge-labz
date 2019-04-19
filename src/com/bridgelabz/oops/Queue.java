@@ -81,6 +81,7 @@ public class Queue<T>
 		arr[rear] =new_data;
 		count++;
 	}
+	
 	public void push(T new_data)
 	{
 		Node<T> new_node=new Node(new_data);
@@ -98,6 +99,7 @@ public class Queue<T>
 		
 		count++;
 	}
+	
 	public void pop()
 	{
 		
