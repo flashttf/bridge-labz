@@ -29,6 +29,7 @@ public class TestUnorderedList {
 				line=line+temp;
 			}
 			words = line.split(" ");
+			
 			//create a linked list for the words
 			UnorderedListImplementation<String> list = new UnorderedListImplementation<String>();
 			for(int i = 0; i < words.length ; i++)
@@ -36,6 +37,7 @@ public class TestUnorderedList {
 				list.add(words[i]);
 			}
 			list.print();
+			
 			//read the key to be searched
 			do
 			{
@@ -55,6 +57,7 @@ public class TestUnorderedList {
 				System.out.printf("\nkey '%s' is not present in the list\n",key);
 				list.add(key);
 			}
+			
 			//display data of each node in the list
 			list.print();
 			list.writeToFile(list, path);
